@@ -73,6 +73,8 @@ h1.hero-h{font-size:56px;line-height:1.04;font-weight:800;letter-spacing:-.01em;
 }
 .cta-primary:hover{background:var(--accent);}
 .cta-secondary{font-size:14px;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--ink);padding-bottom:2px;}
+.cta-secondary-light{font-size:14px;color:#EDEDEB;text-decoration:none;border-bottom:1px solid #5A5F6A;padding-bottom:2px;display:inline-block;margin-top:18px;transition:color .15s,border-color .15s;}
+.cta-secondary-light:hover{color:var(--accent);border-color:var(--accent);}
 .schematic{width:100%;height:auto;}
 
 /* STATS */
