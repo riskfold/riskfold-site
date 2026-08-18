@@ -233,3 +233,5 @@ footer{padding:36px 0;}
 .foot-grid{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;}
 .foot-word{font-family:'Archivo',sans-serif;font-weight:800;font-size:14px;}
 .foot-meta{font-size:12px;color:var(--steel);}
+.foot-meta a{color:var(--steel);text-decoration:none;border-bottom:1px solid var(--hairline);padding-bottom:1px;transition:color .15s,border-color .15s;}
+.foot-meta a:hover{color:var(--accent);border-color:var(--accent);}
