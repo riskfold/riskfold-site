@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb" data-theme="light" data-lang="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Approach — Riskfold</title>
-<meta name="description" content="How a Riskfold engagement actually runs, from scoping call to certification and beyond.">
+<title data-en="Approach — Riskfold">Metode — Riskfold</title>
+<meta name="description" content="Hvordan et Riskfold-oppdrag faktisk forløper, fra oppstartssamtale til sertifikat og videre." data-en="How a Riskfold engagement actually runs, from scoping call to certification and beyond.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
+  (function(){try{var t=localStorage.getItem('rf-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -22,120 +24,135 @@
 
 <nav>
   <div class="wrap">
-    <a class="word" href="index.html">RISKFOLD</a>
+    <a class="word" href="index.html">Riskfold</a>
     <div class="navlinks">
-      <a href="services.html">Services</a>
-      <a href="approach.html" class="active">Approach</a>
-      <a href="about.html">About</a>
-      <a class="nav-cta" href="contact.html">Book a call</a>
+      <a href="services.html" data-en="Services">Tjenester</a>
+      <a href="approach.html" class="active" data-en="Approach">Metode</a>
+      <a href="about.html" data-en="About">Om</a>
     </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-tools">
+      <div class="switch lang-switch" role="group" aria-label="Språk / Language">
+        <button type="button" data-lang="no" aria-pressed="true">NO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-btn" type="button" aria-label="Bytt til mørkt tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      </button>
+      <a class="nav-cta" href="contact.html" data-en="Book a call">Avtal et møte</a>
+      <button class="nav-toggle" aria-label="Åpne meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="approach.html">Approach</a>
-  <a href="about.html">About</a>
-  <a class="nav-cta-mobile" href="contact.html">Book a call</a>
+  <a href="index.html" data-en="Home">Hjem</a>
+  <a href="services.html" data-en="Services">Tjenester</a>
+  <a href="approach.html" data-en="Approach">Metode</a>
+  <a href="about.html" data-en="About">Om</a>
+  <a class="nav-cta-mobile" href="contact.html" data-en="Book a call">Avtal et møte</a>
 </div>
 
 <div class="wrap">
-  <div class="badgebar">
-    <div class="badgebar-l"><a class="badge-circle" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold on LinkedIn">RF</a><div class="badgebar-tag">ISO/IEC 27001 Certification Program</div></div>
-    <div class="badgebar-r">Nordic B2B SaaS &amp; Tech</div>
+  <div class="masthead">
+    <div class="masthead-l">
+      <a class="mark" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold på LinkedIn">RF</a>
+      <div class="masthead-tag label" data-en="ISO/IEC 27001 certification">ISO/IEC 27001-sertifisering</div>
+    </div>
+    <div class="masthead-r label" data-en="Norway · Nordics · B2B SaaS">Norge · Norden · B2B SaaS</div>
   </div>
   <div class="specbar">
-    <span>Stages</span>
-    <span>6</span>
-    <span>Owner: Single Point Of Contact</span>
-    <span>Audit: Independent Review</span>
+    <span class="label" data-en="Stages">Faser</span>
+    <span class="label">6</span>
+    <span class="label" data-en="Owner: single point of contact">Eier: ett kontaktpunkt</span>
+    <span class="label" data-en="Audit: independent review">Revisjon: uavhengig gjennomgang</span>
   </div>
 </div>
 
 <section class="pagehead">
   <div class="wrap">
-    <div class="eyebrow">Approach</div>
-    <h1 class="page-h disp">One owner, start to certification</h1>
-    <p class="page-sub">You get a single point of contact for the whole engagement. Here's what actually happens at each stage, and who's doing the work.</p>
+    <div class="hero-eyebrow label" data-en="Approach">Metode</div>
+    <h1 class="page-h" data-en="One owner, start to certificate">Én eier, fra start til sertifikat</h1>
+    <p class="page-sub" data-en="You get a single point of contact for the whole engagement. Here's what actually happens at each stage, and who does the work.">Dere får ett kontaktpunkt gjennom hele oppdraget. Her er hva som faktisk skjer i hvert trinn, og hvem som gjør jobben.</p>
   </div>
 </section>
 
 <section class="timeline">
   <div class="wrap">
+    <div class="tl-list">
 
-    <div class="tl-item">
-      <div class="tl-num disp">01</div>
-      <div class="tl-body">
-        <h3>Scoping call</h3>
-        <p>Thirty minutes. What's driving the need — a specific deal, an investor requirement, general risk reduction — and which offer actually fits. Most calls end with a clear next step, not a proposal to read later.</p>
+      <div class="tl-item">
+        <div class="tl-num">01</div>
+        <div class="tl-body">
+          <h3 data-en="Scoping call">Oppstartssamtale</h3>
+          <p data-en="Thirty minutes. What's actually driving the need — a specific deal, an investor requirement, general risk reduction — and which offer genuinely fits. Most calls end with a clear next step, not a proposal to read later.">Tretti minutter. Hva som faktisk driver behovet — en konkret avtale, et investorkrav, generell risikoreduksjon — og hvilket tilbud som passer. De fleste samtaler ender med et klart neste steg, ikke et forslag dere må lese senere.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item">
-      <div class="tl-num disp">02</div>
-      <div class="tl-body">
-        <h3>Gap assessment (if needed)</h3>
-        <p>A structured look at your current state against ISO 27001's requirements. You get an honest picture of the distance to certification before committing to it — including cases where the honest answer is "not yet."</p>
+      <div class="tl-item">
+        <div class="tl-num">02</div>
+        <div class="tl-body">
+          <h3 data-en="Gap assessment (if needed)">Gap-analyse (ved behov)</h3>
+          <p data-en="A structured look at your current state against ISO 27001's requirements. You get an honest picture of the distance to certification before committing to it — including cases where the honest answer is &quot;not yet.&quot;">Et strukturert blikk på tilstanden deres opp mot ISO 27001s krav. Dere får et ærlig bilde av avstanden til sertifisering før dere forplikter dere til den — også i de tilfellene der det ærlige svaret er «ikke ennå».</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item">
-      <div class="tl-num disp">03</div>
-      <div class="tl-body">
-        <h3>Implementation</h3>
-        <p>Risk assessment, control design, and documentation, led by a delivery partner with real certification experience, project-managed by Riskfold. Scope decisions — what's genuinely in and out of the ISMS — get made deliberately, not defaulted to "everything," which is the single most common reason implementations overrun.</p>
+      <div class="tl-item">
+        <div class="tl-num">03</div>
+        <div class="tl-body">
+          <h3 data-en="Implementation">Implementering</h3>
+          <p data-en="Risk assessment, control design, and documentation, led by a delivery partner with genuine certification experience, project-managed by Riskfold. Scope decisions — what's actually in and out of the ISMS — get made deliberately, not defaulted to &quot;everything,&quot; which is the single most common reason implementations overrun.">Risikovurdering, kontrolldesign og dokumentasjon, ledet av en leveransepartner med reell sertifiseringserfaring, prosjektstyrt av Riskfold. Beslutninger om omfang — hva som faktisk skal inn og ut av ISMS-et — tas bevisst, ikke som en default satt til «alt», som er den vanligste enkeltårsaken til at implementeringer sprekker i tid.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item">
-      <div class="tl-num disp">04</div>
-      <div class="tl-body">
-        <h3>Internal audit</h3>
-        <p>An independent reviewer — not the person who implemented your controls — checks the work before it goes anywhere near a certification body. Independence is structural, not a formality.</p>
+      <div class="tl-item">
+        <div class="tl-num">04</div>
+        <div class="tl-body">
+          <h3 data-en="Internal audit">Internrevisjon</h3>
+          <p data-en="An independent reviewer — not the person who implemented your controls — checks the work before it goes anywhere near a certification body. Independence is structural, not a formality.">En uavhengig gjennomgang — ikke personen som implementerte kontrollene deres — sjekker arbeidet før det kommer i nærheten av et sertifiseringsorgan. Uavhengigheten er strukturell, ikke en formalitet.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item">
-      <div class="tl-num disp">05</div>
-      <div class="tl-body">
-        <h3>Certification audit</h3>
-        <p>Booked and paid directly with an accredited certification body (Nemko, DNV, Kiwa, or BSI). Riskfold prepares you for it and attends — the relationship with the body is yours, not a black box you're routed through.</p>
+      <div class="tl-item">
+        <div class="tl-num">05</div>
+        <div class="tl-body">
+          <h3 data-en="Certification audit">Sertifiseringsrevisjon</h3>
+          <p data-en="Booked and paid directly with an accredited certification body (Nemko, DNV, Kiwa, or BSI). Riskfold prepares you for it and attends — the relationship with the body is yours, not a black box you're routed through.">Bestilles og betales direkte til et akkreditert sertifiseringsorgan (Nemko, DNV, Kiwa eller BSI). Riskfold forbereder dere og er til stede — relasjonen til organet er deres, ikke en svart boks dere rutes gjennom.</p>
+        </div>
       </div>
-    </div>
 
-    <div class="tl-item">
-      <div class="tl-num disp">06</div>
-      <div class="tl-body">
-        <h3>Maintenance</h3>
-        <p>Certification is a starting line, not a finish line. Surveillance audits happen annually — the retainer keeps the ISMS current so recertification never becomes a scramble.</p>
+      <div class="tl-item">
+        <div class="tl-num">06</div>
+        <div class="tl-body">
+          <h3 data-en="Maintenance">Vedlikehold</h3>
+          <p data-en="Certification is a starting line, not a finish line. Surveillance audits happen annually — the retainer keeps the ISMS current so recertification never becomes a scramble.">Sertifisering er en startstrek, ikke en mållinje. Tilsynsrevisjoner skjer årlig — avtalen holder ISMS-et oppdatert, slik at resertifisering aldri blir en hastesak.</p>
+        </div>
       </div>
-    </div>
 
+    </div>
   </div>
 </section>
 
-<section class="tiers" style="border-bottom:1px solid var(--hairline);">
+<section class="callout-wrap">
   <div class="wrap">
-    <div class="callout">
-      <p><strong>Who actually does the work.</strong> Riskfold owns the client relationship, the project timeline, and every commercial decision. Technical delivery — risk methodology, control design, audit prep — is led by an experienced delivery partner, reviewed at every stage. You're told exactly who's doing what before the engagement starts. As Riskfold takes on more implementations directly, that split shifts — but it's never hidden either way.</p>
+    <div class="callout-box">
+      <p data-en="&lt;strong&gt;Who actually does the work.&lt;/strong&gt; Riskfold owns the client relationship, the project timeline, and every commercial decision. Technical delivery — risk methodology, control design, audit prep — is led by an experienced delivery partner, reviewed at every stage. You're told exactly who's doing what before the engagement starts. As Riskfold takes on more implementations directly, that split shifts — but it's never hidden either way."><strong>Hvem som faktisk gjør jobben.</strong> Riskfold eier kundeforholdet, prosjekttidslinjen og alle kommersielle beslutninger. Den tekniske leveransen — risikometodikk, kontrolldesign, revisjonsforberedelser — ledes av en erfaren leveransepartner, gjennomgått ved hvert trinn. Dere får vite nøyaktig hvem som gjør hva før oppdraget starter. Etter hvert som Riskfold tar på seg flere implementeringer direkte, forskyves denne fordelingen — men den er aldri skjult, uansett.</p>
     </div>
   </div>
 </section>
 
 <section class="strip">
   <div class="wrap strip-grid">
-    <div class="strip-h disp">See how this applies to your situation.</div>
-    <a class="cta-primary" href="contact.html">Book a call</a>
+    <div class="strip-h" data-en="See how this applies to your situation.">Se hvordan dette gjelder for deres situasjon.</div>
+    <a class="cta-primary" href="contact.html" data-en="Book a call">Avtal et møte</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-grid">
-    <div class="foot-word">RISKFOLD</div>
-    <div class="foot-meta">Oslo, Norway · ISO 27001 for Nordic B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="foot-word">Riskfold</div>
+    <div class="foot-meta" data-en="Oslo, Norway · ISO 27001 for Nordic B2B SaaS · &lt;a href=&quot;https://www.linkedin.com/company/riskfold&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LinkedIn&lt;/a&gt;">Oslo · ISO 27001 for nordisk B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
 

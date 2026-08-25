@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
+<html lang="nb" data-theme="light" data-lang="no">
+<head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact — Riskfold</title>
-<meta name="description" content="Book a call or send a message to Riskfold.">
-<link rel="preconnect" href="https://fonts.googleapis.com/">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<title data-en="Contact — Riskfold">Kontakt — Riskfold</title>
+<meta name="description" content="Avtal et møte eller send en melding til Riskfold." data-en="Book a call or send a message to Riskfold.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
+  (function(){try{var t=localStorage.getItem('rf-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -21,44 +24,57 @@
 
 <nav>
   <div class="wrap">
-    <a class="word" href="index.html">RISKFOLD</a>
+    <a class="word" href="index.html">Riskfold</a>
     <div class="navlinks">
-      <a href="services.html">Services</a>
-      <a href="approach.html">Approach</a>
-      <a href="about.html">About</a>
-      <a class="nav-cta active" href="contact.html">Book a call</a>
+      <a href="services.html" data-en="Services">Tjenester</a>
+      <a href="approach.html" data-en="Approach">Metode</a>
+      <a href="about.html" data-en="About">Om</a>
     </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-tools">
+      <div class="switch lang-switch" role="group" aria-label="Språk / Language">
+        <button type="button" data-lang="no" aria-pressed="true">NO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-btn" type="button" aria-label="Bytt til mørkt tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      </button>
+      <a class="nav-cta active" href="contact.html" data-en="Book a call">Avtal et møte</a>
+      <button class="nav-toggle" aria-label="Åpne meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="approach.html">Approach</a>
-  <a href="about.html">About</a>
-  <a class="nav-cta-mobile" href="contact.html">Book a call</a>
+  <a href="index.html" data-en="Home">Hjem</a>
+  <a href="services.html" data-en="Services">Tjenester</a>
+  <a href="approach.html" data-en="Approach">Metode</a>
+  <a href="about.html" data-en="About">Om</a>
+  <a class="nav-cta-mobile" href="contact.html" data-en="Book a call">Avtal et møte</a>
 </div>
 
 <div class="wrap">
-  <div class="badgebar">
-    <div class="badgebar-l"><a class="badge-circle" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold on LinkedIn">RF</a><div class="badgebar-tag">ISO/IEC 27001 Certification Program</div></div>
-    <div class="badgebar-r">Nordic B2B SaaS &amp; Tech</div>
+  <div class="masthead">
+    <div class="masthead-l">
+      <a class="mark" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold på LinkedIn">RF</a>
+      <div class="masthead-tag label" data-en="ISO/IEC 27001 certification">ISO/IEC 27001-sertifisering</div>
+    </div>
+    <div class="masthead-r label" data-en="Norway · Nordics · B2B SaaS">Norge · Norden · B2B SaaS</div>
   </div>
   <div class="specbar">
-    <span>Response Time</span>
-    <span>Same Working Day</span>
-    <span>Call Length: 30 Min</span>
-    <span>Reach: Email · Phone · LinkedIn</span>
+    <span class="label" data-en="Response time">Svartid</span>
+    <span class="label" data-en="Same working day">Samme virkedag</span>
+    <span class="label" data-en="Call length: 30 min">Samtalelengde: 30 min</span>
+    <span class="label" data-en="Reach: Email · Phone · LinkedIn">Kontakt: E-post · Telefon · LinkedIn</span>
   </div>
 </div>
 
 <section class="pagehead">
   <div class="wrap">
-    <div class="eyebrow">Contact</div>
-    <h1 class="page-h disp">Tell me what's blocking the deal</h1>
-    <p class="page-sub">Thirty minutes is usually enough to know which offer fits. Send a message or book directly.</p>
+    <div class="hero-eyebrow label" data-en="Contact">Kontakt</div>
+    <h1 class="page-h" data-en="Tell me what's blocking the deal">Fortell meg hva som blokkerer avtalen</h1>
+    <p class="page-sub" data-en="Thirty minutes is usually enough to know which offer fits. Send a message or book directly.">Tretti minutter er som regel nok til å vite hvilket tilbud som passer. Send en melding eller book direkte.</p>
   </div>
 </section>
 
@@ -66,38 +82,38 @@
   <div class="wrap contact-grid">
 
     <div class="contact-info">
-      <h2 class="disp">Direct</h2>
-      <p>If you'd rather skip the form, use any of these — they all reach the same inbox.</p>
+      <h2 data-en="Direct">Direkte</h2>
+      <p data-en="If you'd rather skip the form, use any of these — they all reach the same inbox.">Hvis dere heller vil hoppe over skjemaet, bruk et av disse — de går til samme innboks.</p>
       <ul class="contact-list">
-        <li><span>Email</span><a href="mailto:ivan@riskfold.com">ivan@riskfold.com</a></li>
-        <li><span>Phone</span><a href="tel:+4793036155">+47 930 36 155</a></li>
+        <li><span data-en="Email">E-post</span><a href="mailto:ivan@riskfold.com">ivan@riskfold.com</a></li>
+        <li><span data-en="Phone">Telefon</span><a href="tel:+4793036155">+47 930 36 155</a></li>
         <li><span>LinkedIn</span><a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">linkedin.com/company/riskfold</a></li>
       </ul>
     </div>
 
     <div class="contact-form">
       <!--
-        Replace the form action below with your own Formspree endpoint
-        (formspree.io — free tier, takes about 5 minutes to set up):
-        1. Create a Formspree account and a new form
-        2. Copy the endpoint it gives you, looks like https://formspree.io/f/xxxxxxx
-        3. Paste it into action="" below
+        Bytt ut form-action under med din egen Formspree-endepunkt
+        (formspree.io — gratis nivå, tar ca. 5 minutter å sette opp):
+        1. Opprett en Formspree-konto og et nytt skjema
+        2. Kopiér endepunktet du får, ser ut som https://formspree.io/f/xxxxxxx
+        3. Lim det inn i action="" under
       -->
       <form action="https://formspree.io/f/mqpzedng" method="POST">
         <div class="form-group">
-          <label for="name">Name</label>
+          <label for="name" data-en="Name">Navn</label>
           <input type="text" id="name" name="name" required="">
         </div>
         <div class="form-group">
-          <label for="email">Work email</label>
+          <label for="email" data-en="Work email">Jobb-e-post</label>
           <input type="email" id="email" name="email" required="">
         </div>
         <div class="form-group">
-          <label for="message">What's going on?</label>
-          <textarea id="message" name="message" required="" placeholder="A deal blocked by a security questionnaire, deciding whether to pursue ISO 27001, already certified and need a retainer…"></textarea>
+          <label for="message" data-en="What's going on?">Hva dreier det seg om?</label>
+          <textarea id="message" name="message" required="" placeholder="En avtale blokkert av et sikkerhetsskjema, vurderer om ISO 27001 er verdt det, allerede sertifisert og trenger en vedlikeholdsavtale …" data-en-placeholder="A deal blocked by a security questionnaire, deciding whether to pursue ISO 27001, already certified and need a retainer…"></textarea>
         </div>
-        <button type="submit" class="cta-primary">Send message</button>
-        <p class="form-note">Typical response time: same working day.</p>
+        <button type="submit" class="cta-primary" data-en="Send message">Send melding</button>
+        <p class="form-note" data-en="Typical response time: same working day.">Vanlig svartid: samme virkedag.</p>
       </form>
     </div>
 
@@ -106,11 +122,10 @@
 
 <footer>
   <div class="wrap foot-grid">
-    <div class="foot-word">RISKFOLD</div>
-    <div class="foot-meta">Oslo, Norway · ISO 27001 for Nordic B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="foot-word">Riskfold</div>
+    <div class="foot-meta" data-en="Oslo, Norway · ISO 27001 for Nordic B2B SaaS · &lt;a href=&quot;https://www.linkedin.com/company/riskfold&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LinkedIn&lt;/a&gt;">Oslo · ISO 27001 for nordisk B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
 
-
-
-</body></html>
+</body>
+</html>

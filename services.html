@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nb" data-theme="light" data-lang="no">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Services — Riskfold</title>
-<meta name="description" content="Questionnaire Sprint, Gap Assessment, ISO 27001 Implementation, and Certification Maintenance Retainer — Riskfold's offer ladder for Nordic B2B SaaS.">
+<title data-en="Services — Riskfold">Tjenester — Riskfold</title>
+<meta name="description" content="Skjemasprint, Gap-analyse, ISO 27001-implementering og Vedlikeholdsavtale — Riskfolds tjenestetrapp for nordisk B2B SaaS." data-en="Questionnaire Sprint, Gap Assessment, ISO 27001 Implementation, and Maintenance Retainer — Riskfold's offer ladder for Nordic B2B SaaS.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <script>
+  (function(){try{var t=localStorage.getItem('rf-theme')||'light';document.documentElement.setAttribute('data-theme',t);}catch(e){}})();
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
 </script>
 <script defer src="/_vercel/insights/script.js"></script>
@@ -22,44 +24,57 @@
 
 <nav>
   <div class="wrap">
-    <a class="word" href="index.html">RISKFOLD</a>
+    <a class="word" href="index.html">Riskfold</a>
     <div class="navlinks">
-      <a href="services.html" class="active">Services</a>
-      <a href="approach.html">Approach</a>
-      <a href="about.html">About</a>
-      <a class="nav-cta" href="contact.html">Book a call</a>
+      <a href="services.html" class="active" data-en="Services">Tjenester</a>
+      <a href="approach.html" data-en="Approach">Metode</a>
+      <a href="about.html" data-en="About">Om</a>
     </div>
-    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-tools">
+      <div class="switch lang-switch" role="group" aria-label="Språk / Language">
+        <button type="button" data-lang="no" aria-pressed="true">NO</button>
+        <button type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="theme-btn" type="button" aria-label="Bytt til mørkt tema">
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M4.2 4.2l1.7 1.7M18.1 18.1l1.7 1.7M2 12h2.4M19.6 12H22M4.2 19.8l1.7-1.7M18.1 5.9l1.7-1.7"/></svg>
+      </button>
+      <a class="nav-cta" href="contact.html" data-en="Book a call">Avtal et møte</a>
+      <button class="nav-toggle" aria-label="Åpne meny" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </div>
 </nav>
 <div class="mobile-menu" id="mobileMenu">
-  <a href="index.html">Home</a>
-  <a href="services.html">Services</a>
-  <a href="approach.html">Approach</a>
-  <a href="about.html">About</a>
-  <a class="nav-cta-mobile" href="contact.html">Book a call</a>
+  <a href="index.html" data-en="Home">Hjem</a>
+  <a href="services.html" data-en="Services">Tjenester</a>
+  <a href="approach.html" data-en="Approach">Metode</a>
+  <a href="about.html" data-en="About">Om</a>
+  <a class="nav-cta-mobile" href="contact.html" data-en="Book a call">Avtal et møte</a>
 </div>
 
 <div class="wrap">
-  <div class="badgebar">
-    <div class="badgebar-l"><a class="badge-circle" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold on LinkedIn">RF</a><div class="badgebar-tag">ISO/IEC 27001 Certification Program</div></div>
-    <div class="badgebar-r">Nordic B2B SaaS &amp; Tech</div>
+  <div class="masthead">
+    <div class="masthead-l">
+      <a class="mark" href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener" aria-label="Riskfold på LinkedIn">RF</a>
+      <div class="masthead-tag label" data-en="ISO/IEC 27001 certification">ISO/IEC 27001-sertifisering</div>
+    </div>
+    <div class="masthead-r label" data-en="Norway · Nordics · B2B SaaS">Norge · Norden · B2B SaaS</div>
   </div>
   <div class="specbar">
-    <span>Timeline</span>
-    <span>3 Days – Ongoing</span>
-    <span>Delivery: Riskfold + Partner</span>
-    <span>Best Fit: Blocked Deal To Full ISMS</span>
+    <span class="label" data-en="Time required">Tidsbruk</span>
+    <span class="label" data-en="3 days – ongoing">3 dager – løpende</span>
+    <span class="label" data-en="Delivery: Riskfold + partner">Leveranse: Riskfold + partner</span>
+    <span class="label" data-en="Best fit: blocked deal to full ISMS">Passer best: fra blokkert avtale til fullt ISMS</span>
   </div>
 </div>
 
 <section class="pagehead">
   <div class="wrap">
-    <div class="eyebrow">Services</div>
-    <h1 class="page-h disp">Four ways in, one ladder</h1>
-    <p class="page-sub">Every engagement starts where you actually are — a blocked deal, an open question, or a real commitment to certification. Nothing here requires you to buy more than the problem in front of you.</p>
+    <div class="hero-eyebrow label" data-en="Services">Tjenester</div>
+    <h1 class="page-h" data-en="Four ways in, one staircase">Fire innganger, én trapp</h1>
+    <p class="page-sub" data-en="Every engagement starts where you actually are — a blocked deal, an open question, or a genuine commitment to certification. Nothing here requires you to buy more than the problem in front of you.">Hvert oppdrag starter der dere faktisk befinner dere — en blokkert avtale, et åpent spørsmål, eller en reell beslutning om å sertifisere. Ingenting her krever at dere kjøper mer enn problemet som står foran dere akkurat nå.</p>
   </div>
 </section>
 
@@ -67,55 +82,55 @@
   <div class="wrap">
     <div class="tier-list">
 
-      <div class="tier-card">
-        <div class="tier-idx mono">01</div>
+      <div class="tier-row">
+        <div class="tier-idx">01</div>
         <div class="tier-body">
-          <h3 class="disp">Questionnaire Sprint</h3>
-          <p>An enterprise prospect has sent a security questionnaire and it's sitting unanswered. Riskfold answers it accurately, fast, without inventing controls you don't have — and flags anything that needs to be fixed before it's sent.</p>
-          <a class="cta-secondary" href="contact.html">Talk to us</a>
+          <h3 data-en="Questionnaire Sprint">Skjemasprint</h3>
+          <p data-en="A prospective enterprise customer has sent a security questionnaire, and it's sitting unanswered. Riskfold answers it accurately and quickly, without inventing controls you don't have — and flags anything that genuinely needs fixing before it goes out.">En potensiell storkunde har sendt et sikkerhetsskjema, og det ligger ubesvart. Riskfold svarer presist og raskt, uten å dikte opp kontroller dere ikke har — og flagger det som faktisk må rettes opp før skjemaet sendes.</p>
+          <a class="cta-secondary" href="contact.html" data-en="Talk to us">Snakk med oss</a>
         </div>
         <div class="tier-meta">
-          <span><b>Timeline</b><span>3–5 days</span></span>
-          <span><b>Best for</b><span>A single deal blocked right now</span></span>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Time required">Tidsbruk</span><span class="tier-meta-val" data-en="3–5 days">3–5 dager</span></div>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Best for">Passer for</span><span class="tier-meta-val" data-en="A single deal blocked right now">En enkelt avtale som er blokkert akkurat nå</span></div>
         </div>
       </div>
 
-      <div class="tier-card">
-        <div class="tier-idx mono">02</div>
+      <div class="tier-row">
+        <div class="tier-idx">02</div>
         <div class="tier-body">
-          <h3 class="disp">Gap Assessment</h3>
-          <p>A structured review of where you stand against ISO 27001 today — what's already in place, what's missing, and a realistic estimate of the work and time a full implementation would take. No commitment to proceed required.</p>
-          <a class="cta-secondary" href="contact.html">Talk to us</a>
+          <h3 data-en="Gap Assessment">Gap-analyse</h3>
+          <p data-en="A structured review of where you genuinely stand against ISO 27001 today — what's already in place, what's missing, and a realistic estimate of the work and time a full implementation would take. No commitment to proceed required.">En strukturert gjennomgang av hvor dere faktisk står mot ISO 27001 i dag — hva som allerede er på plass, hva som mangler, og et realistisk anslag på arbeidet og tiden en full implementering vil kreve. Ingen forpliktelse til å gå videre.</p>
+          <a class="cta-secondary" href="contact.html" data-en="Talk to us">Snakk med oss</a>
         </div>
         <div class="tier-meta">
-          <span><b>Timeline</b><span>1–2 weeks</span></span>
-          <span><b>Best for</b><span>Deciding if certification is worth pursuing</span></span>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Time required">Tidsbruk</span><span class="tier-meta-val" data-en="1–2 weeks">1–2 uker</span></div>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Best for">Passer for</span><span class="tier-meta-val" data-en="Deciding if certification is worth pursuing">Å avgjøre om sertifisering er verdt å forfølge</span></div>
         </div>
       </div>
 
-      <div class="tier-card">
-        <div class="tier-idx mono">03</div>
+      <div class="tier-row">
+        <div class="tier-idx">03</div>
         <div class="tier-body">
-          <h3 class="disp">ISO 27001 Implementation</h3>
-          <p>The core offer. Riskfold owns the project end to end — risk assessment, control design, documentation, internal audit, and certification-body coordination — with a senior delivery partner leading the technical work. You attend what needs your input; nothing else lands on your calendar. Extends to SOC 2 or ISO 27701 where the deal calls for it.</p>
-          <a class="cta-secondary" href="contact.html">Talk to us</a>
+          <h3 data-en="ISO 27001 Implementation">ISO 27001-implementering</h3>
+          <p data-en="The core offer. Riskfold owns the project end to end — risk assessment, control design, documentation, internal audit, and certification-body coordination — with a senior delivery partner leading the technical work. You attend what genuinely needs your input; nothing else lands on your calendar. Extends to SOC 2 or ISO 27701 where the deal calls for it.">Kjernetilbudet. Riskfold eier prosjektet fra start til slutt — risikovurdering, kontrolldesign, dokumentasjon, internrevisjon og koordinering med sertifiseringsorgan — med en erfaren leveransepartner som leder det tekniske arbeidet. Dere møter opp der det faktisk trengs innspill fra dere; resten havner ikke i kalenderen deres. Utvides til SOC 2 eller ISO 27701 der avtalen krever det.</p>
+          <a class="cta-secondary" href="contact.html" data-en="Talk to us">Snakk med oss</a>
         </div>
         <div class="tier-meta">
-          <span><b>Timeline</b><span>3–6 months</span></span>
-          <span><b>Best for</b><span>Committing to certification</span></span>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Time required">Tidsbruk</span><span class="tier-meta-val" data-en="3–6 months">3–6 måneder</span></div>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Best for">Passer for</span><span class="tier-meta-val" data-en="Committing to certification">Beslutningen om å sertifisere er tatt</span></div>
         </div>
       </div>
 
-      <div class="tier-card">
-        <div class="tier-idx mono">04</div>
+      <div class="tier-row">
+        <div class="tier-idx">04</div>
         <div class="tier-body">
-          <h3 class="disp">Certification Maintenance Retainer</h3>
-          <p>Certification isn't a one-time event — surveillance audits, control reviews, and documentation upkeep are annual obligations. The retainer keeps your ISMS audit-ready year-round, so recertification is a formality, not a fire drill.</p>
-          <a class="cta-secondary" href="contact.html">Talk to us</a>
+          <h3 data-en="Maintenance Retainer">Vedlikeholdsavtale</h3>
+          <p data-en="Certification isn't a one-off event — surveillance audits, control reviews, and documentation upkeep are annual obligations. The retainer keeps your ISMS audit-ready year-round, so recertification is a formality, not a fire drill.">Sertifisering er ikke en engangshendelse — tilsynsrevisjoner, kontrollgjennomganger og dokumentasjonsvedlikehold er årlige forpliktelser. Avtalen holder ISMS-et revisjonsklart hele året, slik at resertifisering blir en formalitet, ikke en brannøvelse.</p>
+          <a class="cta-secondary" href="contact.html" data-en="Talk to us">Snakk med oss</a>
         </div>
         <div class="tier-meta">
-          <span><b>Timeline</b><span>Ongoing, annual</span></span>
-          <span><b>Best for</b><span>Already certified, staying that way</span></span>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Time required">Tidsbruk</span><span class="tier-meta-val" data-en="Ongoing, annual">Løpende, årlig</span></div>
+          <div class="tier-meta-row"><span class="tier-meta-label" data-en="Best for">Passer for</span><span class="tier-meta-val" data-en="Already certified, staying that way">Allerede sertifisert, og skal forbli det</span></div>
         </div>
       </div>
 
@@ -125,15 +140,15 @@
 
 <section class="strip">
   <div class="wrap strip-grid">
-    <div class="strip-h disp">Not sure which one you need?</div>
-    <a class="cta-primary" href="contact.html">Book a call</a>
+    <div class="strip-h" data-en="Not sure which one you need?">Usikker på hvilken dere trenger?</div>
+    <a class="cta-primary" href="contact.html" data-en="Book a call">Avtal et møte</a>
   </div>
 </section>
 
 <footer>
   <div class="wrap foot-grid">
-    <div class="foot-word">RISKFOLD</div>
-    <div class="foot-meta">Oslo, Norway · ISO 27001 for Nordic B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
+    <div class="foot-word">Riskfold</div>
+    <div class="foot-meta" data-en="Oslo, Norway · ISO 27001 for Nordic B2B SaaS · &lt;a href=&quot;https://www.linkedin.com/company/riskfold&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;LinkedIn&lt;/a&gt;">Oslo · ISO 27001 for nordisk B2B SaaS · <a href="https://www.linkedin.com/company/riskfold" target="_blank" rel="noopener">LinkedIn</a></div>
   </div>
 </footer>
 
