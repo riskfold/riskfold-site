@@ -443,6 +443,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 }
 .booking-panel h2{font-weight:600;font-size:21px;margin-bottom:10px;letter-spacing:-.018em;}
 .booking-panel > p{font-size:15px;line-height:1.7;color:var(--body);margin-bottom:24px;max-width:52ch;}
+#my-cal-inline{width:100%;min-height:480px;border:1px solid var(--line);margin-bottom:20px;}
 .booking-fallback{width:100%;text-align:center;}
 @media (min-width:520px){ .booking-fallback{width:auto;} }
 

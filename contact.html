@@ -80,15 +80,22 @@
 <section class="contact-wrap">
   <div class="wrap">
 
-    <!--
-      A4: Google Calendar-avtaleplan. Google tillater normalt ikke at denne siden
-      vises i en iframe, så dette er en direkte lenke til den faktiske bookingsiden
-      i stedet for en innebygd kalender. Lenken under er den ekte, aktive lenken.
-    -->
+    <!-- A4: Cal.com inline embed, wired to cal.com/ivan-groven -->
     <div class="booking-panel">
       <h2 data-en="Book directly">Book direkte</h2>
       <p data-en="Thirty minutes, no back-and-forth over email.">Tretti minutter, uten fram-og-tilbake på e-post.</p>
-      <a class="cta-primary booking-fallback" href="https://calendar.app.google/htRQsF8Ng9Mz5hF4A" target="_blank" rel="noopener" data-en="Book 30 minutes">Book 30 minutter</a>
+      <div id="my-cal-inline"></div>
+      <script type="text/javascript">
+        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+        Cal("init", "riskfold", {origin: "https://cal.com"});
+        Cal.ns["riskfold"]("inline", {
+          elementOrSelector: "#my-cal-inline",
+          config: {"layout": "month_view"},
+          calLink: "ivan-groven",
+        });
+        Cal.ns["riskfold"]("ui", {"hideEventTypeDetails": false, "layout": "month_view"});
+      </script>
+      <a class="cta-primary booking-fallback" href="https://cal.com/ivan-groven" target="_blank" rel="noopener" data-en="Book 30 minutes">Book 30 minutter</a>
     </div>
 
     <div class="contact-divider" data-en="Or send a message">Eller send en melding</div>
