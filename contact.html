@@ -81,27 +81,14 @@
   <div class="wrap">
 
     <!--
-      A4: Dette er Cal.com sitt offisielle embed-snippet, med et plassholder-brukernavn.
-      Før dette kan brukes: opprett en konto på cal.com, sett opp en 30-minutters
-      hendelsestype, og erstatt "REPLACE-WITH-DITT-CAL-BRUKERNAVN" begge steder under
-      med ditt faktiske Cal.com-brukernavn (f.eks. "ivan-groven/30min").
-      Alternativ: bytt hele denne blokken med en innebygd Google Calendar-avtaleplan.
+      A4: Google Calendar-avtaleplan. Google tillater normalt ikke at denne siden
+      vises i en iframe, så dette er en direkte lenke til den faktiske bookingsiden
+      i stedet for en innebygd kalender. Lenken under er den ekte, aktive lenken.
     -->
     <div class="booking-panel">
       <h2 data-en="Book directly">Book direkte</h2>
       <p data-en="Thirty minutes, no back-and-forth over email.">Tretti minutter, uten fram-og-tilbake på e-post.</p>
-      <div id="my-cal-inline"></div>
-      <script type="text/javascript">
-        (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if (typeof namespace === "string") { cal.ns[namespace] = cal.ns[namespace] || api; p(cal.ns[namespace], ar); p(cal, ["initNamespace", namespace]); } else p(cal, ar); return; } p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-        Cal("init", "30min", {origin: "https://cal.com"});
-        Cal.ns["30min"]("inline", {
-          elementOrSelector: "#my-cal-inline",
-          config: {"layout": "month_view"},
-          calLink: "REPLACE-WITH-DITT-CAL-BRUKERNAVN/30min",
-        });
-        Cal.ns["30min"]("ui", {"hideEventTypeDetails": false, "layout": "month_view"});
-      </script>
-      <a class="cta-primary booking-fallback" href="https://cal.com/REPLACE-WITH-DITT-CAL-BRUKERNAVN/30min" target="_blank" rel="noopener" data-en="Book 30 minutes">Book 30 minutter</a>
+      <a class="cta-primary booking-fallback" href="https://calendar.app.google/htRQsF8Ng9Mz5hF4A" target="_blank" rel="noopener" data-en="Book 30 minutes">Book 30 minutter</a>
     </div>
 
     <div class="contact-divider" data-en="Or send a message">Eller send en melding</div>
