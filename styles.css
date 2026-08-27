@@ -408,6 +408,8 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
    ========================================================== */
 
 .contact-wrap{padding:68px 0 90px;}
+.wrap-wide{max-width:1500px;margin:0 auto;padding:0 44px;}
+@media (max-width:720px){ .wrap-wide{padding:0 22px;} }
 .contact-grid{display:grid;grid-template-columns:0.85fr 1.3fr;gap:64px;}
 @media (max-width:900px){ .contact-grid{grid-template-columns:1fr;gap:44px;} }
 
@@ -443,7 +445,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 }
 .booking-panel h2{font-weight:600;font-size:21px;margin-bottom:10px;letter-spacing:-.018em;}
 .booking-panel > p{font-size:15px;line-height:1.7;color:var(--body);margin-bottom:24px;max-width:52ch;}
-#my-cal-inline{width:100%;height:820px;border:1px solid var(--line);margin-bottom:20px;}
+#my-cal-inline{width:100%;height:950px;border:1px solid var(--line);margin-bottom:20px;}
 .booking-fallback{width:100%;text-align:center;}
 @media (min-width:520px){ .booking-fallback{width:auto;} }
 
