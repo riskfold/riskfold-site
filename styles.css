@@ -1,5 +1,5 @@
 /* ==========================================================
-   RISKFOLD 2.0 — design system
+   RISKFOLD 2.0 - design system
    Schibsted Grotesk · light default, dark theme via [data-theme]
    ========================================================== */
 
@@ -36,6 +36,7 @@ html{scroll-behavior:smooth;overflow-x:clip;}
 
 body{
   max-width:100%;
+  position:relative;
   background:var(--bg);
   color:var(--ink);
   font-family:'Schibsted Grotesk',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;
@@ -215,7 +216,7 @@ h1.hero-h{
 .cta-quiet:hover{color:var(--accent);border-color:var(--accent);}
 
 /* ==========================================================
-   SIGNATURE — the deliverables ledger
+   SIGNATURE - the deliverables ledger
    ========================================================== */
 
 .ledger{border-bottom:1px solid var(--line);padding:80px 0 0;}
@@ -332,7 +333,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .foot-meta a:hover{color:var(--accent);border-color:var(--accent);}
 
 /* ==========================================================
-   INNER PAGES — shared pagehead
+   INNER PAGES - shared pagehead
    ========================================================== */
 
 .pagehead{padding:86px 0 68px;border-bottom:1px solid var(--line);}
@@ -340,7 +341,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .page-sub{font-size:17px;line-height:1.65;color:var(--body);max-width:58ch;}
 
 /* ==========================================================
-   SERVICES — tier rows
+   SERVICES - tier rows
    ========================================================== */
 
 .tiers{padding:68px 0 90px;border-bottom:1px solid var(--line);}
@@ -374,7 +375,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .tier-meta-val{color:var(--body);}
 
 /* ==========================================================
-   APPROACH — timeline
+   APPROACH - timeline
    ========================================================== */
 
 .timeline{padding:68px 0 0;border-bottom:1px solid var(--line);}
@@ -391,7 +392,7 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
 .callout-box strong{color:var(--ink);font-weight:600;}
 
 /* ==========================================================
-   ABOUT — bio grid
+   ABOUT - bio grid
    ========================================================== */
 
 .bio{padding:68px 0 90px;border-bottom:1px solid var(--line);}
@@ -452,3 +453,51 @@ footer{border-top:1px solid var(--line);padding:40px 0;}
   color:var(--muted);font-size:11px;letter-spacing:.18em;text-transform:uppercase;font-weight:600;
 }
 .contact-divider::before,.contact-divider::after{content:'';flex:1;height:1px;background:var(--line);}
+
+/* ==========================================================
+   ATMOSPHERE — quiet dot texture, confined to the page threshold
+   (nav + hero only). Reads as fine paper grain in light mode,
+   a faint starfield in dark mode. Same pattern, same values —
+   only --ink changes between themes.
+   ========================================================== */
+
+.atmosphere{
+  position:absolute;
+  top:0; left:0; right:0;
+  height:600px;
+  z-index:-1;
+  pointer-events:none;
+  overflow:hidden;
+}
+.atmosphere::before{
+  content:'';position:absolute;inset:0;opacity:.16;
+  background-image:
+    radial-gradient(1.6px 1.6px at 8% 22%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 27% 61%, var(--ink) 50%, transparent 60%),
+    radial-gradient(2px 2px at 52% 14%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.3px 1.3px at 71% 77%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.7px 1.7px at 88% 38%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.1px 1.1px at 16% 87%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.9px 1.9px at 44% 47%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.3px 1.3px at 63% 92%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.5px 1.5px at 95% 8%, var(--ink) 50%, transparent 60%);
+  background-size:210px 210px;
+  -webkit-mask-image:linear-gradient(to bottom, black 0%, black 35%, transparent 85%);
+          mask-image:linear-gradient(to bottom, black 0%, black 35%, transparent 85%);
+}
+.atmosphere::after{
+  content:'';position:absolute;inset:0;opacity:.12;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.4px 1.4px at 60% 55%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1px 1px at 80% 20%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1.2px 1.2px at 38% 82%, var(--ink) 50%, transparent 60%),
+    radial-gradient(1px 1px at 10% 70%, var(--ink) 50%, transparent 60%);
+  background-size:300px 300px;
+  background-position:60px 90px;
+  -webkit-mask-image:linear-gradient(to bottom, black 0%, black 35%, transparent 85%);
+          mask-image:linear-gradient(to bottom, black 0%, black 35%, transparent 85%);
+}
+@media (prefers-contrast:more){
+  .atmosphere{display:none;}
+}
