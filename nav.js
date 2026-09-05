@@ -1,4 +1,4 @@
-/* Riskfold — nav, language and theme controls */
+/* Riskfold - nav, language and theme controls */
 (function () {
   'use strict';
 
@@ -43,9 +43,65 @@
     });
   }
 
+  var GA_ID = 'G-2FYQREXEYF';
+
+  function loadAnalytics(){
+    if (window.__gaLoaded) return;
+    window.__gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    if (typeof gtag === 'function') {
+      gtag('js', new Date());
+      gtag('config', GA_ID);
+    }
+  }
+
+  function showBanner(){
+    var b = document.getElementById('cookieBanner');
+    if (b) b.classList.add('visible');
+  }
+  function hideBanner(){
+    var b = document.getElementById('cookieBanner');
+    if (b) b.classList.remove('visible');
+  }
+
+  function initConsent(){
+    var consent = get('rf-consent');
+    if (consent === 'granted') {
+      loadAnalytics();
+    } else if (consent !== 'denied') {
+      showBanner();
+    }
+
+    var acceptBtn = document.querySelector('.cookie-accept');
+    var declineBtn = document.querySelector('.cookie-decline');
+
+    if (acceptBtn) acceptBtn.addEventListener('click', function(){
+      set('rf-consent', 'granted');
+      loadAnalytics();
+      hideBanner();
+    });
+    if (declineBtn) declineBtn.addEventListener('click', function(){
+      set('rf-consent', 'denied');
+      hideBanner();
+    });
+
+    /* Delegated: the footer settings link lives inside .foot-meta, which
+       gets its innerHTML rebuilt on every language toggle, so a direct
+       listener on the button itself would be lost after the first switch. */
+    document.addEventListener('click', function(e){
+      if (e.target.closest && e.target.closest('.cookie-settings-link')) {
+        showBanner();
+      }
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', function () {
     applyTheme(get('rf-theme') || 'light');
     applyLang(get('rf-lang') || 'no');
+    initConsent();
 
     var themeBtn = document.querySelector('.theme-btn');
     if (themeBtn) themeBtn.addEventListener('click', function () {
